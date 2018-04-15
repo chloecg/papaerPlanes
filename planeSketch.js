@@ -185,16 +185,18 @@ function init() {
     camera = new THREE.PerspectiveCamera(75, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 10000);
     camera.position.z = 450;
     scene = new THREE.Scene();
+    scene.fog = new THREE.Fog( 0xeeeeff, 0, 950 );
 
 
-    var light = new THREE.HemisphereLight(0xeeeeff, 0x777788, 0.5);
+    var light = new THREE.HemisphereLight(0xFFFFFF, 0xFFFFFF, 0.5); //0xeeeeff
     light.position.set(0.5, 1, 0.75);
     scene.add(light);
 
-    var light = new THREE.DirectionalLight(0xefefff, 0.7);
+    var light = new THREE.DirectionalLight(0xFFFFFF, 0.7); //0xefefff
     light.position.set(1, 1, 1).normalize();
     scene.add(light);
-    var light = new THREE.DirectionalLight(0xffefef, 1);
+
+    var light = new THREE.DirectionalLight(0xeeeeff, 1); //0xffefef
     light.position.set(-1, -1, -1).normalize();
     scene.add(light);
 
@@ -214,7 +216,7 @@ function init() {
 
 
 
-    for (var i = 0; i < 300; i++) {
+    for (var i = 0; i < 35; i++) {
         boid = boids[i] = new Boid();
         boid.position.x = Math.random() * 400 - 200;
         boid.position.y = Math.random() * 400 - 200;
@@ -231,7 +233,7 @@ function init() {
 
 
     renderer = new THREE.WebGLRenderer();
-    renderer.setClearColor(0xFFFFFF, 1);
+    renderer.setClearColor(0xFFEFEF, 1);
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
     document.addEventListener('mousemove', onDocumentMouseMove, false);

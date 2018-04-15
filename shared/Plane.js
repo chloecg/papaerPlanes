@@ -15,15 +15,15 @@ var Plane = function() {
     v(-0.9, 0, 1.9);
 
     //top
-    f3(0, 1, 2, 0xFFCC99);
-    f3(0, 2, 3, 0xFFCC99);
-    f3(0, 4, 3, 0xFFCC99);
-    f3(0, 4, 5, 0xFFCC99);
+    f3(0, 1, 3, 0xFFFFFF); //0xFFCC99
+    f3(0, 2, 3, 0xFFFFFF);
+    f3(0, 4, 3, 0xFFFFFF);
+    f3(0, 4, 5, 0xFFFFFF);
     //bottom
-    f3(0, 1, 6, "#cedae8");
-    f3(0, 6, 3, "#cedae8");
-    f3(0, 3, 7, "#cedae8");
-    f3(0, 7, 5, "#cedae8");
+    f3(0, 1, 6, 0xFFFFFF);//"#cedae8"
+    f3(0, 6, 3, 0xFFFFFF);
+    f3(0, 3, 7, 0xFFFFFF);
+    f3(0, 7, 5, 0xFFFFFF);
     //back
     f3(1, 2, 6, 0xFFCC99);
     f3(2, 6, 3, 0xFFCC99);
