@@ -216,7 +216,7 @@ function init() {
 
 
 
-    for (var i = 0; i < 35; i++) {
+    for (var i = 0; i < 75; i++) {
         boid = boids[i] = new Boid();
         boid.position.x = Math.random() * 400 - 200;
         boid.position.y = Math.random() * 400 - 200;
@@ -233,7 +233,7 @@ function init() {
 
 
     renderer = new THREE.WebGLRenderer();
-    renderer.setClearColor(0xFFEFEF, 1);
+    renderer.setClearColor(0xFBFBFB, 1);
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
     document.addEventListener('mousemove', onDocumentMouseMove, false);
